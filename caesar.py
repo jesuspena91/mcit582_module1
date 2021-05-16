@@ -9,7 +9,7 @@ def encrypt(key,plaintext):
             i = (alphabet.find(l) + key) % 26
             ciphertext = ciphertext + alphabet[i]
         else:
-            ciphertext = ciphertext + l
+            ciphertext = ciphertext++
 
     return ciphertext
 
@@ -23,7 +23,7 @@ def decrypt(key,ciphertext):
             i = (alphabet.find(l) - key) % 26
             plaintext = plaintext + alphabet[i]
         else:
-            plaintext = plaintext + l
+            plaintext = plaintext++
 
     return plaintext
 
