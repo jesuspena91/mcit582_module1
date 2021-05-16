@@ -4,12 +4,12 @@ def encrypt(key,plaintext):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     ciphertext = ""
 
-    for letter in plaintext:
-        if letter in alphabet:
-            letter_index = (alphabet.find(letter) + key) % 26
-            ciphertext = ciphertext + alphabet[letter_index]
+    for l in plaintext:
+        if l in alphabet:
+            i = (alphabet.find(l) + key) % 26
+            ciphertext = ciphertext + alphabet[i]
         else:
-            ciphertext = ciphertext + letter
+            ciphertext = ciphertext + l
 
     return ciphertext
 
@@ -18,12 +18,12 @@ def decrypt(key,ciphertext):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     plaintext = ""
 
-    for letter in ciphertext:
-        if letter in alphabet:
-            letter_index = (alphabet.find(letter) - key) % 26
-            plaintext = plaintext + alphabet[letter_index]
+    for l in ciphertext:
+        if l in alphabet:
+            i = (alphabet.find(l) - key) % 26
+            plaintext = plaintext + alphabet[i]
         else:
-            plaintext = plaintext + letter
+            plaintext = plaintext + l
 
     return plaintext
 
