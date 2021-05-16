@@ -15,8 +15,8 @@ def encrypt(key,plaintext):
 
 def decrypt(key,ciphertext):
     ciphertext = ciphertext.upper()
-    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     plaintext = ""
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     for l in ciphertext:
         if l in alphabet:
