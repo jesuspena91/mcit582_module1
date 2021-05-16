@@ -1,10 +1,9 @@
 
 def encrypt(key,plaintext):
-    plaintext = plaintext.upper()
     ciphertext = ""
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    for l in plaintext:
+    for l in plaintext.upper():
         if l in alphabet:
             i = (alphabet.find(l) + key) % 26
             ciphertext = ciphertext + alphabet[i]
