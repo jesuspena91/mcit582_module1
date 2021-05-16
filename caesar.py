@@ -18,8 +18,7 @@ def decrypt(key,ciphertext):
 
     for l in ciphertext.upper():
         if l in alphabet:
-            i = (alphabet.find(l) - key) % 26
-            plaintext = plaintext + alphabet[i]
+            plaintext = plaintext + alphabet[(alphabet.find(l) - key) % 26]
         else:
             plaintext += l
 
