@@ -14,11 +14,10 @@ def encrypt(key,plaintext):
     return ciphertext
 
 def decrypt(key,ciphertext):
-    ciphertext = ciphertext.upper()
     plaintext = ""
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    for l in ciphertext:
+    for l in ciphertext.upper():
         if l in alphabet:
             i = (alphabet.find(l) - key) % 26
             plaintext = plaintext + alphabet[i]
